@@ -1,5 +1,5 @@
 #include "common/asmv8.h"
-#include "common/mem.h"
+#include "common/os_config.h"
 .section    ".text.boot"
 .globl  _start
 _start:
