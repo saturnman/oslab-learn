@@ -1,4 +1,4 @@
-#include "common/mini_uart.h"
+#include "peripherals/mini_uart.h"
 void uart_init(void)
 {
    unsigned int selector;

@@ -1,6 +1,6 @@
 #include "common/mini_uart.h"
 
-void kernel_main(void)
+void kernel_main()
 {
     uart_init();
     uart_send_string("Hello, world!\r\n");

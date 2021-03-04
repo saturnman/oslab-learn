@@ -1,6 +1,7 @@
 #ifndef MINI_UART_H
 #define MINI_UART_H
-#include "peripherals/baseaddr.h"
+
+#include "peripherals/gpio.h"
 
 #define AUX_ENABLES     (PBASE+0x00215004)
 #define AUX_MU_IO_REG   (PBASE+0x00215040)
