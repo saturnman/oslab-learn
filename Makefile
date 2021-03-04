@@ -13,6 +13,8 @@ all : kernel8.img
 clean :
 	rm -rf $(BUILD_DIR) *.img
 
+#$(info cfiles $(C_FILES))
+
 $(BUILD_DIR)/%_c.o: $(OS_SRC_DIR)/%.c
 	mkdir -p $(@D)
 	$(ARMGNU)-gcc $(COPS) -MMD -c $< -o $@
@@ -27,12 +29,12 @@ OBJ_FILES = $(C_FILES:os/%.c=$(BUILD_DIR)/%_c.o)
 OBJ_FILES += $(BOOT_ASM_FILES:boot/%.S=$(BUILD_DIR)/%_s.o)
 OBJ_FILES += $(OS_ASM_FILES:os/%.S=$(BUILD_DIR)/%_s.o)
 
-$(info OBJ_FILES is $(OBJ_FILES))
-$(info ASM_FILES is $(ASM_FILES))
+#$(info OBJ_FILES is $(OBJ_FILES))
+#$(info ASM_FILES is $(ASM_FILES))
 
 
 DEP_FILES = $(OBJ_FILES:%.o=%.d)
-#$(DEP_FILES):
+$(DEP_FILES):
 
 -include $(DEP_FILES)
 

@@ -1,6 +1,7 @@
 #ifndef MINI_UART_H
 #define MINI_UART_H
 
+#include "common/utils.h"
 #include "peripherals/gpio.h"
 
 #define AUX_ENABLES     (PBASE+0x00215004)
